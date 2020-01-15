@@ -22,7 +22,7 @@ const (
 
 // Connect : Connects to RabbitMQ
 func Connect() {
-	connection, err := amqp.Dial("amqp://admin:jukebox_123!@212.224.88.157:5672/")
+	connection, err := amqp.Dial("amqp://user:password!@host:port/")
 	errors.CaptureErr(err, "Failed to connect to RabbitMQ")
 	Connection = *connection
 	channel, err := Connection.Channel()
